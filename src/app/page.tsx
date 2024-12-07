@@ -46,36 +46,44 @@ export default function Home() {
           {errorMessage(error)}
         </div>
       )}
-      <div className="w-full min-h-screen flex justify-center p-1 md:p-6 ">
-        <div className="w-[95%] flex flex-col gap-4 ">
-          <h2 className="w-full text-center text-xl md:text-5xl">DashBoard</h2>
-          <Filters
-            onSearchChange={memoizedSetSearch}
-            onMonthChange={memoizedSetMonth}
-            currentSearch={search}
-            currentMonth={month}
-          />
-          <Products products={data?.products.products} />
+      {!error && (
+        <div className="w-full min-h-screen flex justify-center p-1 md:p-6 ">
+          <div className="w-[95%] flex flex-col gap-4 ">
+            <h2 className="w-full text-center text-xl md:text-5xl">
+              DashBoard
+            </h2>
+            <Filters
+              onSearchChange={memoizedSetSearch}
+              onMonthChange={memoizedSetMonth}
+              currentSearch={search}
+              currentMonth={month}
+            />
+            <Products products={data?.products.products} loading={isLoading} />
 
-          <div className="flex  flex-col gap-6 md:gap-2 md:flex-row  md:flex-wrap md:justify-between items-center ">
-            <div className="flex-1 h-[14rem]  flex justify-center items-center">
-              <BarChart data={data?.barChart} month={month} />
+            <div className="flex  flex-col gap-6 md:gap-2 md:flex-row  md:flex-wrap md:justify-between items-center ">
+              <div className="flex-1 h-[14rem]  flex justify-center items-center">
+                <BarChart
+                  data={data?.barChart}
+                  month={month}
+                  loading={isLoading}
+                />
+              </div>
+              <div className="flex-1 h-[14rem] flex justify-center items-center">
+                <Statistics statistics={data?.statistics} loading={isLoading} />
+              </div>
+              <div className="flex-1 h-[14rem] flex justify-center items-center">
+                <PieChart data={data?.pieChart} loading={isLoading} />
+              </div>
             </div>
-            <div className="flex-1 h-[14rem] flex justify-center items-center">
-              <Statistics statistics={data?.statistics} />
-            </div>
-            <div className="flex-1 h-[14rem] flex justify-center items-center">
-              <PieChart data={data?.pieChart} />
-            </div>
+            <Pegination
+              currentPage={currentPage}
+              onPageChange={setCurrentPage}
+              setLastPage={setLastPage}
+              lastPage={lastPage}
+            />
           </div>
-          <Pegination
-            currentPage={currentPage}
-            onPageChange={setCurrentPage}
-            setLastPage={setLastPage}
-            lastPage={lastPage}
-          />
         </div>
-      </div>
+      )}
     </div>
   );
 }

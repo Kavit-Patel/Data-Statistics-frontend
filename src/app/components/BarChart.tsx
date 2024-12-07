@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { IBarChart } from "../types/types";
+import Loader from "./Loader";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -32,9 +33,11 @@ const months = [
 const BarChart = ({
   data,
   month,
+  loading,
 }: {
   data: IBarChart[] | undefined;
   month: string | null;
+  loading: boolean;
 }) => {
   const chartData = {
     labels: data?.map((item) => item.range),
@@ -75,7 +78,16 @@ const BarChart = ({
     },
   };
 
-  return data && <Bar data={chartData} options={options} />;
+  return (
+    <div className="w-full h-[14rem] flex justify-center items-center">
+      {loading && (
+        <div className="w-screen md:w-full flex justify-center items-center">
+          <Loader width={20} height={20} color={"green-500"} />
+        </div>
+      )}
+      {!loading && data && <Bar data={chartData} options={options} />}
+    </div>
+  );
 };
 
 export default BarChart;

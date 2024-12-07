@@ -3,10 +3,17 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { IPieChart } from "../types/types";
+import Loader from "./Loader";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart = ({ data }: { data: IPieChart[] | undefined }) => {
+const PieChart = ({
+  data,
+  loading,
+}: {
+  data: IPieChart[] | undefined;
+  loading: boolean;
+}) => {
   const chartData = {
     labels: data?.map((item) => item.category),
     datasets: [
@@ -35,7 +42,16 @@ const PieChart = ({ data }: { data: IPieChart[] | undefined }) => {
     },
   };
 
-  return data && <Pie data={chartData} options={options} />;
+  return (
+    <div className="h-[14rem] flex justify-center items-center">
+      {loading && (
+        <div className="w-screen md:w-full flex justify-center items-center">
+          <Loader width={20} height={20} color={"green-500"} />
+        </div>
+      )}
+      {!loading && data && <Pie data={chartData} options={options} />}
+    </div>
+  );
 };
 
 export default PieChart;
