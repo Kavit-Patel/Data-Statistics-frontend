@@ -19,3 +19,28 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.ps__rail-x,
+.ps__rail-y {
+  background-color: transparent !important;
+  z-index: 1;
+}
+
+.ps__thumb-x {
+  background-color: #888;
+  height: 10px !important;
+  border-radius: 5px;
+  min-width: 30px !important;
+}
+
+.ps__thumb-y {
+  background-color: #888;
+  width: 10px !important;
+  border-radius: 5px;
+  min-height: 30px !important;
+}
+
+.ps__thumb-x:hover,
+.ps__thumb-y:hover {
+  background-color: #555;
+}
