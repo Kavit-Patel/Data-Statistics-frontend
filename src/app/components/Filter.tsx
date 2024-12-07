@@ -78,12 +78,12 @@ const Filters = ({
         placeholder={"Search"}
         value={search}
         onChange={handleSearchChange}
-        className="px-1.5 md:px-4 py-2 flex-1 md:flex-none w-6 md:w-44 bg-gray-800 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="px-1.5 md:px-4 py-1 flex-1 md:flex-none w-6 md:w-44 bg-gray-800 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <select
         value={month || ""}
         onChange={handleMonthChange}
-        className="px-1.5 md:px-4 py-2 flex-1 md:flex-none w-6 md:w-44 border bg-gray-800 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="px-1.5 md:px-4 py-1 flex-1 md:flex-none w-6 md:w-44 border bg-gray-800 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         {months.map((m) => (
           <option key={m.value} value={m.value || ""}>

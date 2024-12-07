@@ -15,7 +15,7 @@ const Products = ({
   loading: boolean;
 }) => {
   return (
-    <div className="w-full h-[20rem] overflow-auto shadow-md rounded-lg p-2 md:p-4 lg:p-10 bg-gray-800">
+    <div className="w-full h-[18rem] overflow-auto shadow-md rounded-lg p-2 md:p-4 lg:p-6 bg-gray-800">
       <PerfectScrollbar>
         <table className="w-full bg-white dark:bg-gray-800 text-sm">
           <thead className="w-full">

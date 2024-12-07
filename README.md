@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📊 Data Statistics Dashboard Frontend
+A modern and highly interactive Data Statistics Dashboard built using Next.js, featuring data visualization with bar-chart and pie-chart, dynamic filtering, with smooth API integration. This project is designed to provide a professional user interface for managing and displaying comprehensive product's data insights.
 
-## Getting Started
+🚀 Live Demo
+Explore the live application here: [Data Statistics Dashboard](https://data-statistics-frontend.vercel.app/)
 
-First, run the development server:
+🛠️ Features
+Dynamic Data Visualization: Bar and pie charts integrated using chart.js and react-chartjs-2.
+Real-Time Filtering: Filter data dynamically by month or search term.
+Statistics Display: Comprehensive cards showcasing key metrics like sold items, unsold items, and total sales.
+Pagination: Efficient navigation through datasets with responsive pagination.
+Responsive Design: Fully optimized for desktop and mobile devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+⚙️ Technologies Used
+Framework: Next.js
+Charting Library: chart.js and react-chartjs-2
+Styling: Tailwind CSS
+Toast Notifications: React Toastify
+API Communication: Axios (via environment variable NEXT_PUBLIC_BACKEND_URL)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🖥️ Local Development
+Prerequisites
+Node.js (>= 16.0.0)
+npm or yarn
+Clone the Repository : git clone https://github.com/your-username/data-statistics-frontend.git
+cd data-statistics-frontend
+Install Dependencies: npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Environment Variables: NEXT_PUBLIC_BACKEND_URL=https://data-statistics-backend.onrender.com
+Run the Development Server: npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit http://localhost:3000 to view the app locally.
 
-## Learn More
+🌐 Backend Integration
+This frontend communicates with the backend using the environment variable NEXT_PUBLIC_BACKEND_URL. The live backend for this project is hosted at: https://data-statistics-backend.onrender.com.
 
-To learn more about Next.js, take a look at the following resources:
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🤝 Contribution
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page or submit a pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Fork the repository
+Create your feature branch: git checkout -b feature/my-new-feature
+Commit your changes: git commit -m 'Add some feature'
+Push to the branch: git push origin feature/my-new-feature
+Submit a pull request
 
-## Deploy on Vercel
+🧑‍💻 Author
+Kavit-Patel @kvpatel.er@gmail.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GitHub: [Your GitHub Profile](https://github.com/Kavit-Patel/)
+LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/kavitpatel2050)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📞 Support
+For any questions or feedback, please feel free to open an issue or contact me directly via email at kvpatel.er@gmail.com.
